@@ -21,13 +21,12 @@ namespace TaskManagerAPI.Data
 
             var task = Tasks;
 
-            var columns = "ID;TÍTULO;PRIORIDADE;STATUS;CRIADA EM";
+            var columns = "ID;TÍTULO;PRIORIDADE;STATUS;CRIADA EM;FINALIZADA EM";
             csv.AppendLine(columns);
 
             foreach (var item in task)
             {
                 csv.AppendLine($"{item.Id};" +
-                    $"{item.TaskType?.NameTask};" +
                     $"{item.Comments};" +
                     $"{item.Status};" +
                     $"{item.InitialDate};" +
